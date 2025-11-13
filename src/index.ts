@@ -18,9 +18,9 @@ const server = new McpServer(
 )
 
 server.registerTool(
-  "run_claude_code",
+  "task",
   {
-    title: "Run Claude Code",
+    title: "New task",
     description: "Run Claude Code agent to complete a task",
     inputSchema: {
       task: z
