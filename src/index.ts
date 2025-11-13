@@ -14,7 +14,7 @@ const server = new McpServer(
     capabilities: {
       logging: {},
     },
-  },
+  }
 )
 
 server.registerTool(
@@ -29,7 +29,7 @@ server.registerTool(
       cwd: z
         .string()
         .describe(
-          "The working directory to run the Claude Code, must be an absolute path",
+          "The working directory to run the Claude Code, must be an absolute path"
         ),
       sessionId: z
         .string()
@@ -80,8 +80,16 @@ server.registerTool(
           text: JSON.stringify(result),
         },
       ],
+      _meta: {
+        chatwise: {
+          // do not submit again since we can just display the response directly
+          stop: true,
+          // the markdown to display after the tool result
+          markdown: result?.result || "",
+        },
+      },
     }
-  },
+  }
 )
 
 const transport = new StdioServerTransport()
