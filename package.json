@@ -1,7 +1,8 @@
 {
-  "name": "claude-code-mcp",
+  "name": "gemini-cli-mcp",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.1.0",
+  "description": "MCP server for delegating tasks to Gemini CLI",
   "bin": "./cli.js",
   "scripts": {
     "build": "tsdown src/index.ts",
@@ -16,8 +17,17 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "^0.1.37",
     "@modelcontextprotocol/sdk": "^1.21.1",
     "zod": "3"
+  },
+  "keywords": [
+    "mcp",
+    "gemini",
+    "gemini-cli",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VictorNanka/gemini-cli-mcp"
   }
 }
