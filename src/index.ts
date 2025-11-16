@@ -56,6 +56,16 @@ server.registerTool(
         permissionMode: "acceptEdits",
         cwd,
         resume: sessionId,
+        allowedTools: [
+          "WebSearch",
+          "WebFetch",
+          "Bash",
+          "Edit",
+          "Glob",
+          "Grep",
+          "TodoWrite",
+          "Write",
+        ],
       },
     })) {
       await server.sendLoggingMessage({
